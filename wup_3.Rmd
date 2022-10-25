@@ -24,6 +24,12 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
 ## Now add in boxplot
 
+
+```{r}
+boxplot(alcohol~Seat,data=davisdata)
+```
+
+
 ```{r}
 basicCN + geom_boxplot()
 ```
@@ -39,6 +45,11 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 
 ## Inferential Tests
 
-## Conclusions
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
 
+
+## Conclusions
+the Hypothsis is null
 
